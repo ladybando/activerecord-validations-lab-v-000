@@ -16,6 +16,7 @@ class Post < ActiveRecord::Base
       "Top #{/\d+/}",
       "Guess"
     ]
+    if keywords.any?
 end
 
 end
