@@ -10,7 +10,7 @@ class Post < ActiveRecord::Base
 
     
 
-    keywords = [
+   KEYWORDS= [
       "Won't Believe",
       "Secret",
       "Top #{/\d+/}",
