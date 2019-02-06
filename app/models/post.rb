@@ -10,7 +10,7 @@ class Post < ActiveRecord::Base
 
     
  def clickbait
-   KEYWORDS= [
+   keywords = [
       "Won't Believe",
       "Secret",
       "Top #{/\d+/}",
