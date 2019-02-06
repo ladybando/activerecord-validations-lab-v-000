@@ -6,10 +6,10 @@ class Post < ActiveRecord::Base
     too_long: "%{count} characters is the maximum allowed" }
   validates :content, length: { minimum: 250,
     too_short: "%{count} characters is the minimum allowed" }
-    validates :title presence: true, if: -> {keywords == steps.first || require_validation}
+    validates :title presence: true, if: -> {:title == keywords}
    validates :clickbait
     
- def clickbait
+
     keywords = [
       "Won't Believe",
       "Secret",
@@ -17,8 +17,4 @@ class Post < ActiveRecord::Base
       "Guess"
     ]
 
-    if keywords.none? { |pat| pat.match title }
-      errors.add(:title, "must be clickbait")
-    end
-  end
 end
