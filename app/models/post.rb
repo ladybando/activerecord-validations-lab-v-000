@@ -16,6 +16,6 @@ class Post < ActiveRecord::Base
       "Top #{/\d+/}",
       "Guess"
     ]
-  end
+end
 
 end
