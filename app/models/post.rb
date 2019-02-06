@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
     too_long: "%{count} characters is the maximum allowed" }
   validates :content, length: { minimum: 250,
     too_short: "%{count} characters is the minimum allowed" }
-    validates :title presence: true, if: -> {current_step == steps.first || require_validation}
+    validates :title presence: true, if: -> {keywords == steps.first || require_validation}
    validates :clickbait
     
  def clickbait
