@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
     too_long: "%{count} characters is the maximum allowed" }
   validates :content, length: { minimum: 250,
     too_short: "%{count} characters is the minimum allowed" }
-    validates :title, presence: true, if: -> {:title =~ KEYWORDS}
+    validates :title, presence: true, if: -> {:title == KEYWORDS}
 
     
 
