@@ -17,7 +17,7 @@ class Post < ActiveRecord::Base
       "Guess"
     ]
     if keywords.any? { |keyword| title.include?(keyword) if title }
-      errors.add(:title, "is not clickbait-y")
+      
     end
 end
 
