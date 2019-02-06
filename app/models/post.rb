@@ -7,7 +7,7 @@ class Post < ActiveRecord::Base
   validates :content, length: { minimum: 250,
     too_short: "%{count} characters is the minimum allowed" }
     validates :title presence: true, if: -> {:title == keywords}
-   validates :clickbait
+
     
 
     keywords = [
