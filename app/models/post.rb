@@ -16,7 +16,9 @@ class Post < ActiveRecord::Base
       "Top #{/\d+/}",
       "Guess"
     ]
-    if keywords.any?
+    if keywords.any? { |keyword| title.include?(keyword) if title }
+      errors.add(:title, "is not clickbait-y")
+    end
 end
 
 end
