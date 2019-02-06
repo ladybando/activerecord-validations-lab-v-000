@@ -9,12 +9,13 @@ class Post < ActiveRecord::Base
     validates :title, presence: true, if: -> {:title == KEYWORDS}
 
     
-
+ def clickbait
    KEYWORDS= [
       "Won't Believe",
       "Secret",
       "Top #{/\d+/}",
       "Guess"
     ]
+  end
 
 end
